@@ -26,6 +26,8 @@
             <li>Delhi</li>
         </ol>
         
+        
+        
         <h3>Items required</h3>
     <ul>
         <li>Binocular</li>
@@ -38,6 +40,78 @@
         <li>Music box</li>
     </ul>
 
+    <a href=aboutme.html> Link of AboutMe</a>
+
+    <hr>
+    <h3>
+        ## Table of food items
+    </h3>
+    The following table shows the list of food/drinks. 
+    <table>
+        <tr>
+            <th>food/drink</th>
+            <th>location</th>
+            <th>amount</th>
+        </tr>
+        <tr>
+            <td>biryani</td>
+            <td>hyderabad</td>
+            <td>50-40</td>
+        </tr>
+        <tr>
+            <td>pasta</td>
+            <td>delhi</td>
+            <td>40-30</td>
+        </tr>
+        <tr>
+            <td>pizza</td>
+            <td>vizag</td>
+            <td>30-20</td>
+        </tr>
+        <tr>
+            <td>pepsi</td>
+            <td>mumbai</td>
+            <td>20-10</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>code display</h3>
+    <h4>Algebra</h4>
+    <blockquote>
+        The word algebra is also used in certain specialized ways. 
+        A special kind of mathematical object in abstract algebra is called an "algebra", and the word is used,
+         for example, in the phrases linear algebra and algebraic topology
+    </blockquote>
+<a href=https://en.wikipedia.org/wiki/Algebra> source link</a>
+
+<pre>
+    int gcd(int a, int b, int& x, int& y) {
+        if (b == 0) {
+            x = 1;
+            y = 0;
+            return a;
+        }
+        int x1, y1;
+        int d = gcd(b, a % b, x1, y1);
+        x = y1;
+        y = x1 - y1 * (a / b);
+        return d;
+    }
     
+    bool find_any_solution(int a, int b, int c, int &x0, int &y0, int &g) {
+        g = gcd(abs(a), abs(b), x0, y0);
+        if (c % g) {
+            return false;
+        }
+    
+        x0 *= c / g;
+        y0 *= c / g;
+        if (a < 0) x0 = -x0;
+        if (b < 0) y0 = -y0;
+        return true;
+    }
+    
+</pre>
     </body>
 </html>
